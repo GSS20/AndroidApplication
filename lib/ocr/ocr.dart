@@ -17,7 +17,7 @@ class _MyHomePageState extends State<MyHomePage> {
 
   MyHomePage() {
     tts.setLanguage('en');
-    tts.setSpeechRate(0.4);
+    tts.setSpeechRate(1);
   }
 
   @override

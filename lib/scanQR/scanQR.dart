@@ -1,5 +1,6 @@
 import 'package:barcode_scan_fix/barcode_scan.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_tts/flutter_tts.dart';
 
 class ScanQR extends StatefulWidget {
   @override
@@ -9,6 +10,12 @@ class ScanQR extends StatefulWidget {
 class _ScanQRState extends State<ScanQR> {
 
   String qrCodeResult = "Not Yet Scanned";
+  final FlutterTts tts = FlutterTts();
+
+  ScanQR() {
+    tts.setLanguage('en');
+    tts.setSpeechRate(1);
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -56,11 +63,12 @@ class _ScanQRState extends State<ScanQR> {
                 String codeSanner = await BarcodeScanner.scan();    //barcode scnner
                 setState(() {
                   qrCodeResult = codeSanner;
+                  tts.speak(qrCodeResult);
                 });
               },
               color: Colors.blueAccent,
               child: Text(
-                'View Text',
+                'Scan QR',
                 style: TextStyle(
                   color: Colors.white,
                   fontWeight: FontWeight.normal,
