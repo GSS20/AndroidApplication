@@ -12,4 +12,4 @@
 
 
 ### QR Scan
-![QRScan](https://user-images.githubusercontent.com/70836428/130666396-e98c226c-2c4f-49bc-b9e9-b30433fd9757.jpg)
+![QRScan](https://user-images.githubusercontent.com/70836428/130666958-54c9b5f6-290f-46ef-8aee-73d72ff9511f.jpg)
